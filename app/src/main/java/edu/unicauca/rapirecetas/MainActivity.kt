@@ -1,8 +1,10 @@
 package edu.unicauca.rapirecetas
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
@@ -17,4 +19,11 @@ class MainActivity : AppCompatActivity() {
     fun corazonToggle4(view: View) {Toast.makeText(this,"Añadido",Toast.LENGTH_SHORT)}
     fun corazonToggle5(view: View) {Toast.makeText(this,"Añadido",Toast.LENGTH_SHORT)}
     fun corazonToggle6(view: View) {Toast.makeText(this,"Añadido",Toast.LENGTH_SHORT)}
+
+    fun openAccount(view: View) {}
+    fun openMenu(view: View) {
+        startActivity( Intent(this, Categorias::class.java))
+    }
+
+
 }
