@@ -20,7 +20,9 @@ class MainActivity : AppCompatActivity() {
     fun corazonToggle5(view: View) {Toast.makeText(this,"Añadido",Toast.LENGTH_SHORT)}
     fun corazonToggle6(view: View) {Toast.makeText(this,"Añadido",Toast.LENGTH_SHORT)}
 
-    fun openAccount(view: View) {}
+    fun openAccount(view: View) {
+        startActivity(Intent(this, Cuenta::class.java))
+    }
     fun openMenu(view: View) {
         startActivity( Intent(this, Categorias::class.java))
     }
