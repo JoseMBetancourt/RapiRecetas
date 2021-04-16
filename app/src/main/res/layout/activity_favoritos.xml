@@ -62,7 +62,706 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2"
-        app:layout_constraintVertical_bias="0.0"/>
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/desayuno1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="30dp"
+                android:paddingTop="30dp">
+
+                <ImageView
+                    android:id="@+id/desa1"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.3"
+                    app:srcCompat="@drawable/desa1" />
+
+                <ImageView
+                    android:id="@+id/desa2"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.524"
+                    app:layout_constraintStart_toEndOf="@+id/desa1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/desa2" />
+
+                <View
+                    android:id="@+id/bgPlato1"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:background="#7C000000"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa1"
+                    app:layout_constraintEnd_toEndOf="@+id/desa1"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/desa1"
+                    app:layout_constraintTop_toTopOf="@+id/desa1"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <View
+                    android:id="@+id/bgPlato2"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:background="#7C000000"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa2"
+                    app:layout_constraintEnd_toEndOf="@+id/desa2"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/desa2"
+                    app:layout_constraintTop_toTopOf="@+id/desa2"
+                    app:layout_constraintVertical_bias="0.991" />
+
+                <View
+                    android:id="@+id/lineaPlato1"
+                    android:layout_width="100dp"
+                    android:layout_height="1px"
+                    android:background="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa1"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato1"
+                    app:layout_constraintHorizontal_bias="0.133"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato1"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato1" />
+
+                <View
+                    android:id="@+id/lineaPlato2"
+                    android:layout_width="100dp"
+                    android:layout_height="1px"
+                    android:background="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa2"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato2"
+                    app:layout_constraintHorizontal_bias="0.133"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato2"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato2" />
+
+                <TextView
+                    android:id="@+id/nombrePlato1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Desayuno 1"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa1"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato1"
+                    app:layout_constraintHorizontal_bias="0.093"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato1"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/nombrePlato2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Desayuno 2"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa2"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato2"
+                    app:layout_constraintHorizontal_bias="0.093"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato2"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato2"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tiempoPlato1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="30 min"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa1"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato1"
+                    app:layout_constraintHorizontal_bias="0.068"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato1"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato1"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/tiempoPlato2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="20 min"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa2"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato2"
+                    app:layout_constraintHorizontal_bias="0.068"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato2"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato2"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/toglle_selector"
+                    android:onClick="corazonToggle1"
+                    android:text="ToggleButton"
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toBottomOf="@+id/desa1"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato1"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato1"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato1"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/toglle_selector"
+                    android:onClick="corazonToggle2"
+                    android:text="ToggleButton"
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toBottomOf="@+id/desa2"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato2"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato2"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato2"
+                    app:layout_constraintVertical_bias="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/desayuno2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="30dp"
+                android:paddingTop="30dp">
+
+                <ImageView
+                    android:id="@+id/desa3"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.3"
+                    app:srcCompat="@drawable/desa3" />
+
+                <ImageView
+                    android:id="@+id/desa4"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.524"
+                    app:layout_constraintStart_toEndOf="@+id/desa3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/desa4" />
+
+                <View
+                    android:id="@+id/bgPlato3"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:background="#7C000000"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa3"
+                    app:layout_constraintEnd_toEndOf="@+id/desa3"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/desa3"
+                    app:layout_constraintTop_toTopOf="@+id/desa3"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <View
+                    android:id="@+id/bgPlato4"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:background="#7C000000"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa4"
+                    app:layout_constraintEnd_toEndOf="@+id/desa4"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/desa4"
+                    app:layout_constraintTop_toTopOf="@+id/desa4"
+                    app:layout_constraintVertical_bias="0.991" />
+
+                <View
+                    android:id="@+id/lineaPlato3"
+                    android:layout_width="100dp"
+                    android:layout_height="1px"
+                    android:background="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa3"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato3"
+                    app:layout_constraintHorizontal_bias="0.133"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato3"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato3" />
+
+                <View
+                    android:id="@+id/lineaPlato4"
+                    android:layout_width="100dp"
+                    android:layout_height="1px"
+                    android:background="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa4"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato4"
+                    app:layout_constraintHorizontal_bias="0.133"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato4"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato4" />
+
+                <TextView
+                    android:id="@+id/nombrePlato3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Desayuno 3"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa3"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato3"
+                    app:layout_constraintHorizontal_bias="0.093"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato3"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato3"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/nombrePlato4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Desayuno 4"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa4"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato4"
+                    app:layout_constraintHorizontal_bias="0.093"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato4"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato4"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tiempoPlato3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="30 min"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa3"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato3"
+                    app:layout_constraintHorizontal_bias="0.068"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato3"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato3"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/tiempoPlato4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="20 min"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa4"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato4"
+                    app:layout_constraintHorizontal_bias="0.068"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato4"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato4"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/toglle_selector"
+                    android:onClick="corazonToggle3"
+                    android:text="ToggleButton"
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toBottomOf="@+id/desa3"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato3"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato3"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato3"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/toglle_selector"
+                    android:onClick="corazonToggle4"
+                    android:text="ToggleButton"
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toBottomOf="@+id/desa4"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato4"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato4"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato4"
+                    app:layout_constraintVertical_bias="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/desayuno3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="30dp"
+                android:paddingTop="30dp">
+
+                <ImageView
+                    android:id="@+id/desa5"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.3"
+                    app:srcCompat="@drawable/desa2" />
+
+                <ImageView
+                    android:id="@+id/desa6"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.524"
+                    app:layout_constraintStart_toEndOf="@+id/desa5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/desa1" />
+
+                <View
+                    android:id="@+id/bgPlato5"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:background="#7C000000"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa5"
+                    app:layout_constraintEnd_toEndOf="@+id/desa5"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/desa5"
+                    app:layout_constraintTop_toTopOf="@+id/desa5"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <View
+                    android:id="@+id/bgPlato6"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:background="#7C000000"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa6"
+                    app:layout_constraintEnd_toEndOf="@+id/desa6"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/desa6"
+                    app:layout_constraintTop_toTopOf="@+id/desa6"
+                    app:layout_constraintVertical_bias="0.991" />
+
+                <View
+                    android:id="@+id/lineaPlato5"
+                    android:layout_width="100dp"
+                    android:layout_height="1px"
+                    android:background="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa5"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato5"
+                    app:layout_constraintHorizontal_bias="0.133"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato5"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato5" />
+
+                <View
+                    android:id="@+id/lineaPlato6"
+                    android:layout_width="100dp"
+                    android:layout_height="1px"
+                    android:background="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa6"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato6"
+                    app:layout_constraintHorizontal_bias="0.133"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato6"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato6" />
+
+                <TextView
+                    android:id="@+id/nombrePlato5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Desayuno 5"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa5"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato5"
+                    app:layout_constraintHorizontal_bias="0.093"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato5"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato5"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/nombrePlato6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Desayuno 6"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa6"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato6"
+                    app:layout_constraintHorizontal_bias="0.093"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato6"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato6"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tiempoPlato5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="30 min"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa5"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato5"
+                    app:layout_constraintHorizontal_bias="0.068"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato5"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato5"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/tiempoPlato6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="20 min"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa6"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato6"
+                    app:layout_constraintHorizontal_bias="0.068"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato6"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato6"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/toglle_selector"
+                    android:onClick="corazonToggle5"
+                    android:text="ToggleButton"
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toBottomOf="@+id/desa5"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato5"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato5"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato5"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/toglle_selector"
+                    android:onClick="corazonToggle6"
+                    android:text="ToggleButton"
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toBottomOf="@+id/desa6"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato6"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato6"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato6"
+                    app:layout_constraintVertical_bias="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/desayuno4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingTop="30dp">
+
+                <ImageView
+                    android:id="@+id/desa7"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.3"
+                    app:srcCompat="@drawable/desa1" />
+
+                <ImageView
+                    android:id="@+id/desa8"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.524"
+                    app:layout_constraintStart_toEndOf="@+id/desa7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/desa2" />
+
+                <View
+                    android:id="@+id/bgPlato7"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:background="#7C000000"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa7"
+                    app:layout_constraintEnd_toEndOf="@+id/desa7"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/desa7"
+                    app:layout_constraintTop_toTopOf="@+id/desa7"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <View
+                    android:id="@+id/bgPlato8"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:background="#7C000000"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa8"
+                    app:layout_constraintEnd_toEndOf="@+id/desa8"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/desa8"
+                    app:layout_constraintTop_toTopOf="@+id/desa8"
+                    app:layout_constraintVertical_bias="0.991" />
+
+                <View
+                    android:id="@+id/lineaPlato7"
+                    android:layout_width="100dp"
+                    android:layout_height="1px"
+                    android:background="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa7"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato7"
+                    app:layout_constraintHorizontal_bias="0.133"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato7"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato7" />
+
+                <View
+                    android:id="@+id/lineaPlato8"
+                    android:layout_width="100dp"
+                    android:layout_height="1px"
+                    android:background="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa8"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato8"
+                    app:layout_constraintHorizontal_bias="0.133"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato8"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato8" />
+
+                <TextView
+                    android:id="@+id/nombrePlato7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Desayuno 7"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa7"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato7"
+                    app:layout_constraintHorizontal_bias="0.093"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato7"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato7"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/nombrePlato8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Desayuno 8"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa8"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato8"
+                    app:layout_constraintHorizontal_bias="0.093"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato8"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato8"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tiempoPlato7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="30 min"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa7"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato7"
+                    app:layout_constraintHorizontal_bias="0.068"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato7"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato7"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/tiempoPlato8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="20 min"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/desa8"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato8"
+                    app:layout_constraintHorizontal_bias="0.068"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato8"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato8"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/toglle_selector"
+                    android:onClick="corazonToggle7"
+                    android:text="ToggleButton"
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toBottomOf="@+id/desa7"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato7"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato7"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato7"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/toglle_selector"
+                    android:onClick="corazonToggle8"
+                    android:text="ToggleButton"
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toBottomOf="@+id/desa8"
+                    app:layout_constraintEnd_toEndOf="@+id/bgPlato8"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintStart_toStartOf="@+id/bgPlato8"
+                    app:layout_constraintTop_toTopOf="@+id/bgPlato8"
+                    app:layout_constraintVertical_bias="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
