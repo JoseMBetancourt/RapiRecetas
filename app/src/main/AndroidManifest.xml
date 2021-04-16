@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RapiRecetas">
-        <activity android:name=".Cuenta"></activity>
+        <activity android:name=".Favoritos"></activity>
+        <activity android:name=".Cuenta" />
         <activity android:name=".Categorias" />
         <activity android:name=".MainActivity">
             <intent-filter>
