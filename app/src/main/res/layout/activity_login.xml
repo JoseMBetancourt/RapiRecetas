@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="100dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imagenreceta"
+                android:layout_width="match_parent"
+                android:layout_height="837dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/fondo_registro" />
+            <View
+                android:id="@+id/view1"
+                android:layout_width="wrap_content"
+                android:layout_height="837dp"
+                android:background="#37000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imagenreceta" />
+
+            <ImageButton
+                android:id="@+id/menuIcon"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/ic_baseline_menu_24"
+                android:onClick="openMenu"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/Titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="40dp"
+                android:fontFamily="cursive"
+                android:text="RapiRecetas"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="45dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textStyle="italic"
+                android:layout_marginVertical="40dp"
+                android:paddingHorizontal="40dp"
+                android:text="Regístrate o inicia sesión para guardar tus recetas favoritas"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Titulo"/>
+
+            <View
+                android:id="@+id/bgGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="50dp"
+                android:background="@drawable/radius5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/Descripcion"
+                app:layout_constraintVertical_bias="0.311" />
+
+            <Button
+                android:id="@+id/buttonG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:drawableLeft ="@drawable/ic_logotipo_de_google_glass"
+                android:text="Inicia sesión con Google"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/bgGoogle"
+                app:layout_constraintEnd_toEndOf="@id/bgGoogle"
+                app:layout_constraintStart_toStartOf="@id/bgGoogle"
+                app:layout_constraintTop_toBottomOf="@+id/bgGoogle" />
+
+            <View
+                android:id="@+id/bgFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="50dp"
+                android:background="@drawable/radius6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/bgGoogle"
+                app:layout_constraintVertical_bias="0.18" />
+
+            <Button
+                android:id="@+id/buttonF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:drawableLeft ="@drawable/ic_logotipo_circular_de_facebook"
+                android:drawablePadding="60dp"
+                android:text="Inicia sesión con Facebook"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/bgFacebook"
+                app:layout_constraintEnd_toEndOf="@id/bgFacebook"
+                app:layout_constraintStart_toStartOf="@id/bgFacebook"
+                app:layout_constraintTop_toBottomOf="@+id/bgFacebook" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bgFacebook">
+
+                <View
+                    android:id="@+id/linea1"
+                    android:layout_width="170dp"
+                    android:layout_height="4px"
+                    android:layout_marginTop="24dp"
+                    android:background="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/O"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="O"
+                    android:textSize="30dp"
+                    android:textColor="#FFFFFF" />
+
+                <View
+                    android:id="@+id/linea2"
+                    android:layout_width="170dp"
+                    android:layout_height="4px"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="24dp"
+                    android:background="#FFFFFF" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/bgCrear"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="50dp"
+                android:background="@drawable/radius7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/linearLayout"
+                app:layout_constraintVertical_bias="0.22" />
+
+            <Button
+                android:id="@+id/buttonCrear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:text="Crear una cuenta"
+                app:layout_constraintBottom_toTopOf="@+id/bgCrear"
+                app:layout_constraintEnd_toEndOf="@id/bgCrear"
+                app:layout_constraintStart_toStartOf="@id/bgCrear"
+                app:layout_constraintTop_toBottomOf="@+id/bgCrear" />
+
+
+            <TextView
+                android:id="@+id/Politica"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="60dp"
+                android:paddingHorizontal="20dp"
+                android:text="Al registrarse acepta nuestro acuerdo de usuario y nuestra política de privacidad."
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bgCrear" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

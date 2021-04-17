@@ -11,7 +11,9 @@
         android:theme="@style/Theme.RapiRecetas">
         <activity android:name=".Favoritos"></activity>
         <activity android:name=".Cuenta" />
+        <activity android:name=".Receta"/>
         <activity android:name=".Categorias" />
+        <activity android:name=".Login" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

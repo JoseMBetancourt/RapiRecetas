@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, Cuenta::class.java))
     }
     fun openMenu(view: View) {
-        startActivity( Intent(this, Categorias::class.java))
+        startActivity( Intent(this, Receta::class.java))
     }
 
 
