@@ -26,6 +26,4 @@ class MainActivity : AppCompatActivity() {
     fun openMenu(view: View) {
         startActivity( Intent(this, Categorias::class.java))
     }
-
-
 }
