@@ -1,535 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawarLayout"
     tools:context=".MainActivity">
-
-
-    <ScrollView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="100dp">
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:elevation="16dp"
+            android:background="@color/cardview_dark_background"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <include
-                layout="@layout/toolbar"
-                android:id="@+id/include"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+            android:layout_height="?actionBarSize">
             <ImageView
-                android:id="@+id/banner1"
-                android:layout_width="fill_parent"
-                android:layout_height="250dp"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/include"
-                app:srcCompat="@drawable/comidas_mundo" />
-
-            <SearchView
-                android:id="@+id/barraBusqueda1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/bar_background"
-                android:iconifiedByDefault="false"
-                android:queryHint="Ramen, Sushi, Carnes"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/banner1"/>
-
-            <TextView
-                android:id="@+id/categoria1"
+                android:id="@+id/imgMenu"
+                android:padding="8dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_menu_item"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="15dp"
-                android:text="Búsquedas Populares"
-                android:textSize="20dp"
-                android:fontFamily="cursive"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/barraBusqueda1" />
-            <View
-                android:id="@+id/lineaCategoria1"
-                android:layout_width="200dp"
-                android:layout_height="2dp"
-                android:layout_marginTop="4dp"
-                android:background="#F46C36"
-                app:layout_constraintStart_toStartOf="@+id/categoria1"
-                app:layout_constraintTop_toBottomOf="@id/categoria1" />
-            <HorizontalScrollView
-                android:id="@+id/scrollHorizontal1"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/lineaCategoria1">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:paddingLeft="15dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="150dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_height="match_parent">
-                        <ImageView
-                            android:id="@+id/plato1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:adjustViewBounds="true"
-                            android:scaleType="centerCrop"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/desa1" />
-
-                        <View
-                            android:id="@+id/bgPlato1"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="#7C000000"
-                            app:layout_constraintBottom_toBottomOf="@+id/plato1"
-                            app:layout_constraintStart_toStartOf="parent" />
-                        <View
-                            android:id="@+id/lineaPlato1"
-                            android:layout_width="100dp"
-                            android:layout_height="1px"
-                            android:background="#FFFFFF"
-                            app:layout_constraintBottom_toBottomOf="@+id/nombrePlato1"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:id="@+id/nombrePlato1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="Desayuno 1"
-                            android:textColor="@color/white"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/bgPlato1" />
-                        <TextView
-                            android:id="@+id/tiempoPlato1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="sans-serif-light"
-                            android:text="30 min"
-                            android:textColor="@color/white"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/lineaPlato1" />
-
-                        <ToggleButton
-                            android:id="@+id/toggleButton"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/toglle_selector"
-                            android:text="ToggleButton"
-                            android:textOff=""
-                            android:textOn=""
-                            android:onClick="corazonToggle"
-                            app:layout_constraintBottom_toBottomOf="@+id/plato1"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/bgPlato1" />
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="150dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_height="match_parent">
-                        <ImageView
-                            android:id="@+id/plato2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:adjustViewBounds="true"
-                            android:scaleType="centerCrop"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/desa2" />
-
-                        <View
-                            android:id="@+id/bgPlato2"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="#7C000000"
-                            app:layout_constraintBottom_toBottomOf="@+id/plato2"
-                            app:layout_constraintStart_toStartOf="parent" />
-                        <View
-                            android:id="@+id/lineaPlato2"
-                            android:layout_width="100dp"
-                            android:layout_height="1px"
-                            android:background="#FFFFFF"
-                            app:layout_constraintBottom_toBottomOf="@+id/nombrePlato2"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:id="@+id/nombrePlato2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="Desayuno 2"
-                            android:textColor="@color/white"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/bgPlato2" />
-                        <TextView
-                            android:id="@+id/tiempoPlato2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="sans-serif-light"
-                            android:text="15 min"
-                            android:textColor="@color/white"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/lineaPlato2" />
-
-                        <ToggleButton
-                            android:id="@+id/toggleButton2"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/toglle_selector"
-                            android:text="ToggleButton"
-                            android:textOff=""
-                            android:textOn=""
-                            android:onClick="corazonToggle2"
-                            app:layout_constraintBottom_toBottomOf="@+id/plato2"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/bgPlato2" />
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="150dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_height="match_parent">
-                        <ImageView
-                            android:id="@+id/plato3"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:adjustViewBounds="true"
-                            android:scaleType="centerCrop"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/desa3" />
-
-                        <View
-                            android:id="@+id/bgPlato3"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="#7C000000"
-                            app:layout_constraintBottom_toBottomOf="@+id/plato3"
-                            app:layout_constraintStart_toStartOf="parent" />
-                        <View
-                            android:id="@+id/lineaPlato3"
-                            android:layout_width="100dp"
-                            android:layout_height="1px"
-                            android:background="#FFFFFF"
-                            app:layout_constraintBottom_toBottomOf="@+id/nombrePlato3"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:id="@+id/nombrePlato3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="Desayuno 3"
-                            android:textColor="@color/white"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/bgPlato3" />
-                        <TextView
-                            android:id="@+id/tiempoPlato3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="sans-serif-light"
-                            android:text="15 min"
-                            android:textColor="@color/white"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/lineaPlato3" />
-
-                        <ToggleButton
-                            android:id="@+id/toggleButton3"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/toglle_selector"
-                            android:text="ToggleButton"
-                            android:textOff=""
-                            android:textOn=""
-                            android:onClick="corazonToggle3"
-                            app:layout_constraintBottom_toBottomOf="@+id/plato3"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/bgPlato3" />
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                </LinearLayout>
-            </HorizontalScrollView>
-
+                android:layout_height="wrap_content"/>
             <TextView
-                android:id="@+id/categoria2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="15dp"
-                android:text="Premium"
-                android:textSize="20dp"
+                android:id="@+id/title"
+                android:text="@string/app_name"
                 android:fontFamily="cursive"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/scrollHorizontal1" />
-            <View
-                android:id="@+id/lineaCategoria2"
-                android:layout_width="200dp"
-                android:layout_height="2dp"
-                android:layout_marginTop="4dp"
-                android:background="#8BC34A"
-                app:layout_constraintStart_toStartOf="@+id/categoria2"
-                app:layout_constraintTop_toBottomOf="@id/categoria2" />
-            <ImageView
-                android:id="@+id/premiumIcon1"
-                android:layout_width="20dp"
-                android:layout_height="30dp"
-                app:srcCompat="@drawable/ic_corona"
-                app:layout_constraintEnd_toEndOf="@id/lineaCategoria2"
-                app:layout_constraintBottom_toTopOf="@id/lineaCategoria2" />
-            <HorizontalScrollView
-                android:id="@+id/scrollHorizontal2"
+                android:layout_gravity="center"
+                android:textStyle="bold|normal"
+                android:textSize="25sp"
+                android:layout_margin="15dp"
+                android:textColor="@color/white"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/lineaCategoria2">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:paddingLeft="15dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="150dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_height="match_parent">
-                        <ImageView
-                            android:id="@+id/plato4"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:adjustViewBounds="true"
-                            android:scaleType="centerCrop"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/desa4" />
-
-                        <View
-                            android:id="@+id/bgPlato4"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="#7C000000"
-                            app:layout_constraintBottom_toBottomOf="@+id/plato4"
-                            app:layout_constraintStart_toStartOf="parent" />
-                        <View
-                            android:id="@+id/lineaPlato4"
-                            android:layout_width="100dp"
-                            android:layout_height="1px"
-                            android:background="#FFFFFF"
-                            app:layout_constraintBottom_toBottomOf="@+id/nombrePlato4"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:id="@+id/nombrePlato4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="Desayuno 4"
-                            android:textColor="@color/white"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/bgPlato4" />
-                        <TextView
-                            android:id="@+id/tiempoPlato4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="sans-serif-light"
-                            android:text="30 min"
-                            android:textColor="@color/white"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/lineaPlato4" />
-
-                        <ToggleButton
-                            android:id="@+id/toggleButton4"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/toglle_selector"
-                            android:text="ToggleButton"
-                            android:textOff=""
-                            android:textOn=""
-                            android:onClick="corazonToggle4"
-                            app:layout_constraintBottom_toBottomOf="@+id/plato4"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/bgPlato4" />
+                android:layout_height="wrap_content"/>
 
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="150dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_height="match_parent">
-                        <ImageView
-                            android:id="@+id/plato5"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:adjustViewBounds="true"
-                            android:scaleType="centerCrop"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/desa3" />
-
-                        <View
-                            android:id="@+id/bgPlato5"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="#7C000000"
-                            app:layout_constraintBottom_toBottomOf="@+id/plato5"
-                            app:layout_constraintStart_toStartOf="parent" />
-                        <View
-                            android:id="@+id/lineaPlato5"
-                            android:layout_width="100dp"
-                            android:layout_height="1px"
-                            android:background="#FFFFFF"
-                            app:layout_constraintBottom_toBottomOf="@+id/nombrePlato5"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:id="@+id/nombrePlato5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="Desayuno 2"
-                            android:textColor="@color/white"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/bgPlato5" />
-                        <TextView
-                            android:id="@+id/tiempoPlato5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="sans-serif-light"
-                            android:text="15 min"
-                            android:textColor="@color/white"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/lineaPlato5" />
-
-                        <ToggleButton
-                            android:id="@+id/toggleButton5"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/toglle_selector"
-                            android:text="ToggleButton"
-                            android:textOff=""
-                            android:textOn=""
-                            android:onClick="corazonToggle5"
-                            app:layout_constraintBottom_toBottomOf="@+id/plato5"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/bgPlato5" />
+        </LinearLayout>
 
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+        <fragment
+            android:id="@+id/fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/naav_frag" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="150dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_height="match_parent">
-                        <ImageView
-                            android:id="@+id/plato6"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:adjustViewBounds="true"
-                            android:scaleType="centerCrop"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/desa1" />
-
-                        <View
-                            android:id="@+id/bgPlato6"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="#7C000000"
-                            app:layout_constraintBottom_toBottomOf="@+id/plato6"
-                            app:layout_constraintStart_toStartOf="parent" />
-                        <View
-                            android:id="@+id/lineaPlato6"
-                            android:layout_width="100dp"
-                            android:layout_height="1px"
-                            android:background="#FFFFFF"
-                            app:layout_constraintBottom_toBottomOf="@+id/nombrePlato6"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:id="@+id/nombrePlato6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="Desayuno 6"
-                            android:textColor="@color/white"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/bgPlato6" />
-                        <TextView
-                            android:id="@+id/tiempoPlato6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="sans-serif-light"
-                            android:text="15 min"
-                            android:textColor="@color/white"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/lineaPlato6" />
-
-                        <ToggleButton
-                            android:id="@+id/toggleButton6"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/toglle_selector"
-                            android:text="ToggleButton"
-                            android:textOff=""
-                            android:textOn=""
-                            android:onClick="corazonToggle6"
-                            app:layout_constraintBottom_toBottomOf="@+id/plato6"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/bgPlato6" />
+    </LinearLayout>
 
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--add drawerlayout-->
+    <include layout="@layout/naav_drawer"/>
 
 
-                </LinearLayout>
-            </HorizontalScrollView>
 
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

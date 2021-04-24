@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">RapiRecetas</string>
+    <string name="my_account">Mi cuenta</string>
+    <string name="home">Inicio</string>
+    <string name="profile">Perfil</string>
+    <string name="other">Informacion</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="categories">Categorias</string>
+    <string name="favorites">Favoritos</string>
+    <string name="general">General</string>
 </resources>
