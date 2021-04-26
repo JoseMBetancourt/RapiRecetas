@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp">
+
+    <ImageView
+        android:id="@+id/imageReceta"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/desa1" />
+
+    <View
+        android:id="@+id/bgPlato1"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="#7C000000"
+        app:layout_constraintBottom_toBottomOf="@+id/imageReceta"
+        app:layout_constraintStart_toStartOf="@id/imageReceta" />
+    <View
+        android:id="@+id/lineaPlato1"
+        android:layout_width="100dp"
+        android:layout_height="1px"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/NombreReceta"
+        app:layout_constraintStart_toStartOf="@id/imageReceta" />
+
+    <TextView
+        android:id="@+id/NombreReceta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Desayuno 1"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/imageReceta"
+        app:layout_constraintTop_toTopOf="@+id/bgPlato1" />
+    <TextView
+        android:id="@+id/pDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="sans-serif-light"
+        android:text="30 min"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/imageReceta"
+        app:layout_constraintTop_toTopOf="@+id/lineaPlato1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

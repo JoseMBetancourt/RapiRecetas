@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cardview_dark_background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="openMainActivity"
+            android:background="@drawable/ic_home2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RapiRecetas"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:fontFamily="cursive"
+            android:textAlignment="center"
+            android:layout_marginLeft="80dp"
+            />
+
+        <ImageButton
+            android:id="@+id/editReceta"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="openEdit"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/ic_edit" />
+
+        <ImageButton
+            android:id="@+id/deleteReceta"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="DeleteReceta"
+            android:layout_marginHorizontal="10dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_delete"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

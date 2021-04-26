@@ -9,11 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RapiRecetas">
-        <activity android:name=".Creditos"></activity>
-        <activity android:name=".Favoritos" />
-        <activity android:name=".Cuenta" />
+        <activity android:name=".Recetas2"></activity>
         <activity android:name=".Receta" />
-        <activity android:name=".Categorias" />
+        <activity android:name=".Addreceta"/>
         <activity android:name=".Login" />
         <activity android:name=".MainActivity">
             <intent-filter>

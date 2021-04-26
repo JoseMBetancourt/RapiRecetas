@@ -20,6 +20,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <include
+                android:id="@+id/include"
+                layout="@layout/toolbar_receta"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
 
             <ImageView
                 android:id="@+id/imagenreceta"
@@ -32,14 +39,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/include"
                 app:srcCompat="@drawable/desa2" />
 
-            <ImageButton
-                android:id="@+id/menuIcon"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="5dp"
-                android:background="@drawable/ic_baseline_menu_24"
-                android:onClick="openMenu"
-                app:layout_constraintStart_toStartOf="parent" />
 
             <View
                 android:id="@+id/bgReceta"
@@ -113,97 +112,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/imagenreceta" />
 
             <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:gravity="center_horizontal"
-                android:background="@drawable/radius"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Descripcion">
-
-                <ImageView
-                    android:id="@+id/imgingredientes"
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:paddingStart="4dp"
-                    android:layout_marginVertical="6dp"
-                    android:layout_gravity="center_vertical"
-                    app:srcCompat="@drawable/ic_vegetariano__1_" />
-
-                <TextView
-                    android:id="@+id/cantidad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="cursive"
-                    android:paddingStart="3dp"
-                    android:text="2 ingredientes"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical"/>
-
-                <View
-                    android:id="@+id/linea1"
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:background="#DFD5D5"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imgreloj"
-                    android:layout_width="30dp"
-                    android:layout_height="40dp"
-                    android:padding="2dp"
-                    android:layout_marginVertical="6dp"
-                    android:layout_gravity="center_vertical"
-                    app:srcCompat="@drawable/ic_reloj" />
-
-                <TextView
-                    android:id="@+id/tiempo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="cursive"
-                    android:paddingStart="3dp"
-                    android:text="2 hra y 25 min"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical" />
-
-                <View
-                    android:id="@+id/linea2"
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:background="#DFD5D5"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imgdificultad"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:padding="2dp"
-                    android:layout_gravity="center_vertical"
-                    app:srcCompat="@drawable/ic_velocimetro" />
-
-                <TextView
-                    android:id="@+id/nivel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="cursive"
-                    android:paddingStart="3dp"
-                    android:text="Muy Difícil"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical" />
-
-            </LinearLayout>
-
-            <LinearLayout
                 android:id="@+id/linearlayout2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -212,9 +120,9 @@
                 android:gravity="center_horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+                app:layout_constraintTop_toBottomOf="@id/Descripcion">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent">
 
@@ -222,87 +130,30 @@
                         android:id="@+id/CantidadPorciones"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_marginHorizontal="20dp"
                         android:fontFamily="cursive"
+                        android:gravity="center_vertical"
                         android:paddingStart="15dp"
                         android:text="Porciones a preparar"
                         android:textColor="@color/black"
                         android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:gravity="center_vertical" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp">
-
-                    <View
-                        android:id="@+id/bgMenos"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/radius2"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <ToggleButton
-                        android:id="@+id/togglemenos"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/ic_signo_menos_de_una_linea_en_posicion_horizontal"
-                        android:textOff=""
-                        android:textOn="" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="10dp">
-
-                    <View
-                        android:id="@+id/bgValor"
-                        android:layout_width="80dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/radius3"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/Valor"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/radius3"
                         android:text="2"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="20dp"
                         app:layout_constraintStart_toStartOf="parent" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp">
 
-                    <View
-                        android:id="@+id/bgPlus"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/radius2"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <ToggleButton
-                        android:id="@+id/togglePlus"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp"
-                        android:background="@drawable/ic_mas"
-                        android:textOff=""
-                        android:textOn="" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -329,102 +180,17 @@
                     android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/img1"
-                        android:layout_width="35dp"
-                        android:layout_height="40dp"
-                        android:layout_marginVertical="5dp"
-                        android:layout_marginStart="28dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_cebolla" />
-
-                    <View
-                        android:id="@+id/lineaIngredientes"
-                        android:layout_width="125dp"
-                        android:layout_height="2dp"
-                        android:layout_marginStart="80dp"
-                        android:background="@color/black"
-                        app:layout_constraintBottom_toBottomOf="@+id/ingrediente"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <TextView
-                        android:id="@+id/ingrediente"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Cebolla"
-                        android:paddingBottom="5dp"
-                        android:textSize="18dp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="@id/lineaIngredientes" />
-
-                    <TextView
-                        android:id="@+id/CantidadP"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif"
-                        android:text="1/2 unidad"
-                        android:paddingTop="5dp"
-                        android:textColor="@color/black"
-                        app:layout_constraintStart_toStartOf="@id/lineaIngredientes"
-                        app:layout_constraintTop_toTopOf="@+id/lineaIngredientes" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <TextView
+                    android:id="@+id/ingrediente"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginVertical="8dp">
-
-                    <ImageView
-                        android:id="@+id/img2"
-                        android:layout_width="35dp"
-                        android:layout_height="40dp"
-                        android:layout_marginVertical="5dp"
-                        android:layout_marginStart="28dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_pasta" />
-
-                    <View
-                        android:id="@+id/lineaIngredientes2"
-                        android:layout_width="125dp"
-                        android:layout_height="2dp"
-                        android:layout_marginStart="80dp"
-                        android:background="@color/black"
-                        app:layout_constraintBottom_toBottomOf="@+id/ingrediente2"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <TextView
-                        android:id="@+id/ingrediente2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pasta"
-                        android:textSize="18dp"
-                        android:paddingBottom="5dp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="@id/lineaIngredientes2" />
-
-                    <TextView
-                        android:id="@+id/CantidadP2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif"
-                        android:text="2 unidades"
-                        android:paddingTop="5dp"
-                        android:textColor="@color/black"
-                        app:layout_constraintStart_toStartOf="@id/lineaIngredientes2"
-                        app:layout_constraintTop_toTopOf="@+id/lineaIngredientes2" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:layout_marginVertical="10dp"
+                    android:textSize="18dp"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <View
                     android:id="@+id/lineaPreparacion"
@@ -444,101 +210,18 @@
                     android:textStyle="bold"
                     android:textSize="25dp"/>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <TextView
+                    android:id="@+id/Pasos"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:layout_marginVertical="10dp"
+                    android:textSize="18dp"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/img3"
-                        android:layout_width="35dp"
-                        android:layout_height="40dp"
-                        android:layout_marginVertical="5dp"
-                        android:layout_marginStart="28dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_pasta" />
-
-                    <View
-                        android:id="@+id/linea5"
-                        android:layout_width="140dp"
-                        android:layout_height="2dp"
-                        android:layout_marginStart="80dp"
-                        android:background="@color/black"
-                        app:layout_constraintBottom_toBottomOf="@+id/ingrediente3"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <TextView
-                        android:id="@+id/ingrediente3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Hervir la pasta"
-                        android:paddingBottom="5dp"
-                        android:textSize="18dp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="@id/linea5" />
-
-                    <TextView
-                        android:id="@+id/Paso1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif"
-                        android:text="3 a 4 minutos"
-                        android:paddingTop="5dp"
-                        android:textColor="@color/black"
-                        app:layout_constraintStart_toStartOf="@id/linea5"
-                        app:layout_constraintTop_toTopOf="@+id/linea5" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginVertical="6dp">
-
-                    <ImageView
-                        android:id="@+id/img4"
-                        android:layout_width="35dp"
-                        android:layout_height="40dp"
-                        android:layout_marginVertical="5dp"
-                        android:layout_marginStart="28dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_cebolla" />
-
-                    <View
-                        android:id="@+id/linea6"
-                        android:layout_width="140dp"
-                        android:layout_height="2dp"
-                        android:layout_marginStart="80dp"
-                        android:background="@color/black"
-                        app:layout_constraintBottom_toBottomOf="@+id/ingrediente4"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <TextView
-                        android:id="@+id/ingrediente4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Picar finamente la cebolla"
-                        android:paddingBottom="5dp"
-                        android:textSize="18dp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="@id/linea6" />
-
-                    <TextView
-                        android:id="@+id/Paso2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif"
-                        android:text="Con ayuda de un cuchillo picar la cebolla"
-                        android:paddingTop="5dp"
-                        android:textColor="@color/black"
-                        app:layout_constraintStart_toStartOf="@id/linea6"
-                        app:layout_constraintTop_toTopOf="@+id/linea6" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

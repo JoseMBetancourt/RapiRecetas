@@ -1,9 +1,13 @@
 package edu.unicauca.rapirecetas
 
 
+import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.CompoundButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -14,6 +18,9 @@ import androidx.navigation.NavDestination
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.navigation.NavigationView
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +44,6 @@ class MainActivity : AppCompatActivity() {
                 textTitle.text = destination.label
             }
 
-
     }
 
     fun corazonToggle(view: View) {Toast.makeText(this,"Añadido",Toast.LENGTH_SHORT)}
@@ -46,7 +52,8 @@ class MainActivity : AppCompatActivity() {
     fun corazonToggle4(view: View) {Toast.makeText(this,"Añadido",Toast.LENGTH_SHORT)}
     fun corazonToggle5(view: View) {Toast.makeText(this,"Añadido",Toast.LENGTH_SHORT)}
     fun corazonToggle6(view: View) {Toast.makeText(this,"Añadido",Toast.LENGTH_SHORT)}
-
-
+    fun openRecetas(view: View) {
+        startActivity( Intent(this, Recetas2::class.java))
+    }
 
 }
