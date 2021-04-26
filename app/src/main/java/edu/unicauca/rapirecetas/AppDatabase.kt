@@ -1,11 +1,12 @@
 package edu.unicauca.rapirecetas
 
+
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database (entities = [Receta1::class], version=1 )
+@Database (entities = [EstructuraReceta::class], version=1 )
 abstract class AppDatabase : RoomDatabase() {
     abstract fun recetas(): RecetaDao
 
@@ -22,9 +23,9 @@ abstract class AppDatabase : RoomDatabase() {
 
             synchronized( this) {
                 val instance = Room.databaseBuilder(
-                        context.applicationContext,
-                        AppDatabase::class.java,
-                        "app_database"
+                    context.applicationContext,
+                    AppDatabase::class.java,
+                    "app_database"
                 ).build()
 
                 INSTANCE = instance

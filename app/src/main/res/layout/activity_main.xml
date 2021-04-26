@@ -1,70 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawarLayout"
-    tools:context=".MainActivity">
-    <LinearLayout
-        android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:elevation="16dp"
-            android:background="@color/cardview_dark_background"
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize">
-            <ImageView
-                android:id="@+id/imgMenu"
-                android:padding="8dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_menu_item"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/title"
-                android:text="@string/app_name"
-                android:fontFamily="cursive"
-                android:layout_gravity="center"
-                android:textStyle="bold|normal"
-                android:textSize="25sp"
-                android:layout_margin="15dp"
-                android:textColor="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+        android:layout_height="match_parent" />
 
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#00FFFFFF"
-                android:onClick="openRecetas"
-                android:layout_marginLeft="100dp"
-                app:srcCompat="@drawable/ic_baseline_menu_book_24" />
-
-
-
-        </LinearLayout>
-
-
-        <fragment
-            android:id="@+id/fragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:defaultNavHost="true"
-            app:navGraph="@navigation/naav_frag" />
-
-    </LinearLayout>
-
-
-
-    <!--add drawerlayout-->
-    <include layout="@layout/naav_drawer"/>
-
-
-
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
 </androidx.drawerlayout.widget.DrawerLayout>

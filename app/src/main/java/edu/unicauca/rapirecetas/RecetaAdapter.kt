@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.item_receta.view.*
 
 
-class RecetaAdapter(private val mContext: Context, private val listarecetas:List<Receta1>) :ArrayAdapter<Receta1>(mContext, 0 , listarecetas) {
+class RecetaAdapter(private val mContext: Context, private val listarecetas:List<EstructuraReceta>) :ArrayAdapter<EstructuraReceta>(mContext, 0 , listarecetas) {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val layout= LayoutInflater.from(mContext).inflate(R.layout.item_receta, parent, false)
 

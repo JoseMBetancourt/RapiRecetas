@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="edu.unicauca.rapirecetas.view.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_categories"
+        android:name="edu.unicauca.rapirecetas.view.CategoriesFragment"
+        android:label="Categorias"
+        tools:layout="@layout/fragment_categories" />
+
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="edu.unicauca.rapirecetas.view.FavoritesFragment"
+        android:label="Favoritos"
+        tools:layout="@layout/fragment_favorites" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="edu.unicauca.rapirecetas.view.ProfileFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_creditos"
+        android:name="edu.unicauca.rapirecetas.view.CreditosFragment"
+        android:label="Creditos"
+        tools:layout="@layout/fragment_creditos" />
+</navigation>
