@@ -1,6 +1,8 @@
 package edu.unicauca.rapirecetas.view
 
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +11,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import edu.unicauca.rapirecetas.AppDatabase
 import edu.unicauca.rapirecetas.EstructuraReceta
 import edu.unicauca.rapirecetas.ImageControler
@@ -63,13 +66,24 @@ class RecetaActivity : AppCompatActivity() {
     }
 
     fun DeleteReceta(view: View){
-        recetaLiveData.removeObservers(this)
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Eliminar una receta")
+            .setMessage("¿Está seguro que desea eliminar la receta? Está acción es irreversible")
+            .setNegativeButton("No"){dialog, which ->
+                Toast.makeText(this, "Acción declinada", Toast.LENGTH_SHORT).show()
+            }
+            .setPositiveButton("Si"){dialog, which ->
+                recetaLiveData.removeObservers(this)
 
-        CoroutineScope(Dispatchers.IO).launch {
-            database.recetas().delete(receta)
-            ImageControler.deleteImage(this@RecetaActivity, receta.idReceta.toLong())
-            this@RecetaActivity.finish()
-        }
+                CoroutineScope(Dispatchers.IO).launch {
+                    database.recetas().delete(receta)
+                    ImageControler.deleteImage(this@RecetaActivity, receta.idReceta.toLong())
+                    this@RecetaActivity.finish()
+                }
+
+            }
+            .show()
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
