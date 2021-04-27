@@ -3,49 +3,56 @@ package edu.unicauca.rapirecetas.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.*
+import edu.unicauca.rapirecetas.Adaptador
 import edu.unicauca.rapirecetas.R
+import edu.unicauca.rapirecetas.RecetaOnline
 import kotlinx.android.synthetic.main.activity_lista_recetas_online.*
 import java.lang.StringBuilder
 
 class ListaRecetasOnlineActivity : AppCompatActivity() {
+
+    private lateinit var dbref : DatabaseReference
+    private lateinit var recetaRecyclerview : RecyclerView
+    private lateinit var recetaArrayList : ArrayList<RecetaOnline>
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_recetas_online)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setTitle("Todas las recetas")
 
-        // Descarga desde FireBase
+        recetaRecyclerview = findViewById(R.id.recyclerViewFirebase)
+        recetaRecyclerview.layoutManager = LinearLayoutManager(this)
+        recetaRecyclerview.setHasFixedSize(true)
+        recetaArrayList = arrayListOf<RecetaOnline>()
 
-        var database = FirebaseDatabase.getInstance().reference
+        getRecetaData()
 
-        var getData = object : ValueEventListener {
+    }
+
+    private fun getRecetaData() {
+
+        dbref = FirebaseDatabase.getInstance().reference
+        dbref.addValueEventListener(object : ValueEventListener{
+
             override fun onDataChange(snapshot: DataSnapshot) {
-                var sb = StringBuilder()
-                for (i in snapshot.children) {
-                    var nombre = i.child("nombre").getValue()
-                    var desC = i.child("desC").getValue()
-                    var desL = i.child("desL").getValue()
-                    var porciones = i.child("porciones").getValue()
-                    var ingredientes = i.child("ingredientes").getValue()
-                    var pasos = i.child("pasos").getValue()
-
-                    sb.append("${i.key} $nombre $desC $desL $porciones $ingredientes $pasos \n")
-
+                if (snapshot.exists()){
+                    for (userSnapshot in snapshot.children){
+                        val receta = userSnapshot.getValue(RecetaOnline::class.java)
+                        recetaArrayList.add(receta!!)
+                    }
+                    recetaRecyclerview.adapter = Adaptador(recetaArrayList)
                 }
-                textViewFireBase.setText(sb)
             }
 
             override fun onCancelled(error: DatabaseError) {
-
+                TODO("Not yet implemented")
             }
-        }
-
-        database.addValueEventListener(getData)
-        database.addListenerForSingleValueEvent(getData)
+        })
 
     }
 
