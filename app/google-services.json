@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "225696013583",
+    "project_id": "rapirecetas-5253b",
+    "storage_bucket": "rapirecetas-5253b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225696013583:android:0d411765a1ddc2f510727a",
+        "android_client_info": {
+          "package_name": "edu.unicauca.rapirecetas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "225696013583-h6dolcjvu7dil77th7gm57j0cmulguvd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA4kULkgf1pSQj2u23TZjS57aAQLMlNKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "225696013583-h6dolcjvu7dil77th7gm57j0cmulguvd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
