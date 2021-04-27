@@ -27,7 +27,7 @@ class RecetaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_receta)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-
+        supportActionBar!!.setTitle("Gestionar Receta")
 
         database = AppDatabase.getDatabase(this)
 
