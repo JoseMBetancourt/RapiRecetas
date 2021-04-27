@@ -40,6 +40,18 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
+
+        navView.menu.findItem(R.id.nav_lista_recetas_online).setOnMenuItemClickListener { item ->
+            when(item.itemId){
+                R.id.nav_lista_recetas_online ->{
+                    val intent = Intent(this, ListaRecetasOnlineActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+
+            }
+        }
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf(
                 R.id.nav_home, R.id.nav_profile, R.id.nav_favorites, R.id.nav_creditos, R.id.nav_categories

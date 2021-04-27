@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RapiRecetas">
-        <activity android:name=".view.RecetaActivity"></activity>
+        <activity android:name=".view.ListaRecetasOnlineActivity"></activity>
+        <activity android:name=".view.RecetaActivity" />
         <activity android:name=".view.AddRecetaActivity" />
         <activity android:name=".view.MisRecetasActivity" />
         <activity

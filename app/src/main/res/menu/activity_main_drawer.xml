@@ -17,6 +17,11 @@
                 android:title="@string/categories"
                 android:icon="@drawable/ic_categories"
                 />
+            <item
+                android:id="@+id/nav_lista_recetas_online"
+                android:title="@string/lista_recetas"
+                android:icon="@drawable/ic_format_list_numbered_24"
+                />
 
 
         </menu>

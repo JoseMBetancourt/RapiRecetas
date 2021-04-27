@@ -23,4 +23,5 @@
     <string name="editTextIngredientes">Ingredientes</string>
     <string name="editTextPasos">Pasos</string>
     <string name="save_btn">Guardar</string>
+    <string name="lista_recetas">Recetas</string>
 </resources>
