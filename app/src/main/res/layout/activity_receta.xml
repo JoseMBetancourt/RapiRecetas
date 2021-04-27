@@ -7,7 +7,6 @@
     tools:context=".view.RecetaActivity">
 
 
-
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
@@ -21,6 +20,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <include layout="@layout/toolbar_receta"
+                android:id="@+id/include"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+
+
 
             <ImageView
                 android:id="@+id/imagenreceta"
@@ -30,7 +38,7 @@
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include"
                 app:srcCompat="@drawable/desa2" />
 
 

@@ -17,8 +17,8 @@
     <string name="favorites">Favoritos</string>
     <string name="other">Otros</string>
     <string name="categories">Categorias</string>
-    <string name="editTextNombre">aiuda</string>
-    <string name="editTextDescripcionCorta">aiuda</string>
+    <string name="editTextNombre">Nombre</string>
+    <string name="editTextDescripcionCorta">Descripcion Corta</string>
     <string name="editTextDescripcion">Descripcion</string>
     <string name="editTextIngredientes">Ingredientes</string>
     <string name="editTextPasos">Pasos</string>
