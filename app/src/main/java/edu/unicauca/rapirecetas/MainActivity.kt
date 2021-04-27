@@ -2,6 +2,8 @@ package edu.unicauca.rapirecetas.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -46,6 +48,16 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
     }
 
+
+    fun corazonToggle(view: View) {Toast.makeText(this,"Añadido", Toast.LENGTH_SHORT)}
+    fun corazonToggle1(view: View) {Toast.makeText(this,"Añadido", Toast.LENGTH_SHORT)}
+    fun corazonToggle2(view: View) {Toast.makeText(this,"Añadido", Toast.LENGTH_SHORT)}
+    fun corazonToggle3(view: View) {Toast.makeText(this,"Añadido", Toast.LENGTH_SHORT)}
+    fun corazonToggle4(view: View) {Toast.makeText(this,"Añadido", Toast.LENGTH_SHORT)}
+    fun corazonToggle5(view: View) {Toast.makeText(this,"Añadido", Toast.LENGTH_SHORT)}
+    fun corazonToggle6(view: View) {Toast.makeText(this,"Añadido", Toast.LENGTH_SHORT)}
+    fun corazonToggle7(view: View) {Toast.makeText(this,"Añadido", Toast.LENGTH_SHORT)}
+    fun corazonToggle8(view: View) {Toast.makeText(this,"Añadido", Toast.LENGTH_SHORT)}
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
